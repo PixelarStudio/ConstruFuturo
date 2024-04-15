@@ -1,0 +1,74 @@
+---
+import { navigate } from "astro:transitions/client";
+import ToggleThemeButton from "../ToggleThemeButton.astro";
+
+function goToFaq() {
+  navigate("/faq");
+}
+
+function goToHorarios() {
+  navigate("/Horarios");
+}
+
+function goToTips() {
+  navigate("/Tips");
+}
+
+function goToServicios() {
+  navigate("/Servicios");
+}
+
+function goToPrecios() {
+  navigate("/Precios");
+}
+
+const imgLogo = "./img/construfuturo.png";
+---
+
+<nav class="nav backdrop-blur-sm sticky top-0 margin-0">
+  <div class="logo"><img src={imgLogo} alt="LOGO ConstruFuturo" /></div>
+  <div>
+    <a href="/Faq"><em>Faq</em></a>
+    <a href="/Horarios"><em>Horarios</em></a>
+    <a href="/Precios"><em>Precios</em></a>
+    <a href="/Servicios"><em>Servicios</em></a>
+    <a href="/Tips"><em>Tips</em></a>
+  </div>
+  <div class="login"> <ToggleThemeButton /></div>
+ 
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    padding: 1.3rem;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  
+  }
+
+  ul,
+  a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+</style>
+
+<script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+  

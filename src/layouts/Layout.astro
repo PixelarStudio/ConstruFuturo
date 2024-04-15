@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -22,30 +22,33 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--color-bg: #ffffff;  /* Color de fondo para el tema claro */
+		--color-text: #333333; /* Color de texto para el tema claro */
 	}
+	
+	[data-theme="dark"] {
+		--color-bg: #333333;  /* Color de fondo para el tema oscuro */
+		--color-text: #ffffff; /* Color de texto para el tema oscuro */
+	}
+	
+	body {
+		background-color: var(--color-bg);
+		color: var(--color-text);
+		padding: 0;
+		margin: 0 auto;
+		
+	}
+	
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
+		color: white;
 	}
 	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+
+	
 </style>
+	

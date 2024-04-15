@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const ListadoTips = [{
+        id: 1,
+        titulo: 'Verificar Estructuras',
+        descripcion: 'Asegúrate de que las estructuras estén bien diseñadas y construidas según las normas de seguridad.'
+    },
+    {
+        id: 2,
+        titulo: 'Instala una cámara de seguridad',
+        descripcion: 'Instala una cámara de seguridad en tu hogar, es una de las mejores formas de proteger tu hogar'
+    },
+    {
+        id: 3,
+        titulo: 'Instala una cerradura de seguridad',
+        descripcion: 'Instala una cerradura de seguridad en tu hogar, es una de las mejores formas de proteger tu hogar y a tu familia.'
+    },
+    {
+        id: 4,
+        titulo: 'Instala una puerta blindada',
+        descripcion: 'Instala una puerta blindada en tu hogar, es una de las mejores formas de proteger tu hogar el hogar.'
+    },
+    {
+        id: 5,
+        titulo: 'Inspeccion de Fisuras',
+        descripcion: 'Realiza inspecciones regulares de techos y paredes para detectar fisuras.'
+    },
+    {
+        id: 6,
+        titulo: 'Sin sobrecargas electricas',
+        descripcion: 'No sobrecargues los circuitos eléctricos y utiliza fusibles apropiados.'
+    },
+    {
+        id: 7,
+        titulo: 'Ten un extintor de incendios',
+        descripcion: '4.	Mantén un extintor de incendios en lugares clave.'
+    },
+    {
+        id: 8,
+        titulo: 'Escaleras Seguras',
+        descripcion: 'Asegura que las escaleras y barandas estén firmemente fijadas.'
+    },
+    {
+        id: 9,
+        titulo: 'Utiliza cerraduras de seguridad',
+        descripcion: 'Utiliza cerraduras de seguridad y sistemas de alarma para protección.'
+    },
+    {
+        id: 10, 
+        titulo: 'Instalaciones de Gas',
+        descripcion: 'Asegúrate de que las instalaciones de gas y calefacción cumplan con las normativas vigentes.'
+    }
+]
+
+---
+<Layout title="Tips">
+<div>
+    <h2>Tips</h2>
+    <p>Tips de Seguridad y Protección para el Hogar</p>
+    <ul>
+        <li>{
+            ListadoTips.map((tip) => (
+                <div>
+                    <h3>{tip.titulo}</h3>
+                    <p>{tip.descripcion}</p>
+                </div>
+            )
+            )}</li>
+
+    </ul>
+</div>
+
+</Layout>
+
+
+<style is:global>
+
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+		color: white;
+        
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
+
+
