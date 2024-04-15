@@ -38,4 +38,4 @@ cd ConstruFuturo
 npm install
 
 # Inicia el servidor
-npm start
+npm run dev
