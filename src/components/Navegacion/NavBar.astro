@@ -1,6 +1,5 @@
 ---
 import { navigate } from "astro:transitions/client";
-import ToggleThemeButton from "../ToggleThemeButton.astro";
 
 function goToFaq() {
   navigate("/faq");
@@ -21,6 +20,9 @@ function goToServicios() {
 function goToPrecios() {
   navigate("/Precios");
 }
+function goToHome() {
+  navigate("/");
+}
 
 const imgLogo = "./img/construfuturo.png";
 ---
@@ -28,17 +30,18 @@ const imgLogo = "./img/construfuturo.png";
 <nav class="nav backdrop-blur-sm sticky top-0 margin-0">
   <div class="logo"><img src={imgLogo} alt="LOGO ConstruFuturo" /></div>
   <div>
+    <a href="/"><em>Inicio</em></a>
     <a href="/Faq"><em>Faq</em></a>
     <a href="/Horarios"><em>Horarios</em></a>
     <a href="/Precios"><em>Precios</em></a>
     <a href="/Servicios"><em>Servicios</em></a>
     <a href="/Tips"><em>Tips</em></a>
   </div>
-  <div class="login"> <ToggleThemeButton /></div>
+  <div class="login"> </div>
  
 </nav>
 
-<style>
+<style is:global>
   nav {
     display: flex;
     gap: 10px;
