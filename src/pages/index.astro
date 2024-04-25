@@ -1,26 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Faq from "./Faq.astro";
-import HeroBack from "./HeroBack.astro";
+/* import Faq from "./Faq.astro";
 import Horarios from "./Horarios.astro";
 import Servicios from "./Servicios.astro";
 import Tips from "./Tips.astro";
-import Precios from "./Precios.astro";
+import Precios from "./Precios.astro"; */
+import NavBar from "../components/Navegacion/NavBar.astro";
+import HeroBack from "./HeroBack.astro";
 ---
 
 <Layout title="Bienvenidos a ConstruFuturo!">
-  
-	<main>
-	  <HeroBack />
-    <Servicios />
-    <Precios />
-    <Tips />
-    <Faq />
-    <Horarios />
-  </main>
-  <footer>
-	<p>© 2024 ConstruFuturo</p>
-  </footer>
+
+  <NavBar/>
+	<main >
+ 	  <HeroBack />
+   </main>
+  <footer />
 </Layout>
 
 <style is:global>
@@ -43,20 +38,3 @@ import Precios from "./Precios.astro";
   }
 </style>
 
-<script>
-	// Cambiar el tema y almacenar la preferencia del usuario
-	function toggleTheme() {
-	  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-	  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-	  document.documentElement.setAttribute('data-theme', newTheme);
-	  localStorage.setItem('theme', newTheme);
-	}
-  
-	// Cargar el tema guardado o el preferido por el sistema
-	document.addEventListener('DOMContentLoaded', () => {
-	  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-	  const savedTheme = localStorage.getItem('theme') || (prefersDark ? 'dark' : 'light');
-	  document.documentElement.setAttribute('data-theme', savedTheme);
-	});
-  </script>
-  

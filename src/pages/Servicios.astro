@@ -1,36 +1,127 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import NavBar from "../components/Navegacion/NavBar.astro"
+import NavBar from "../components/Navegacion/NavBar.astro";
+import Layout from "../layouts/Layout.astro";
+const services = [
+  { name: "Construcción de edificios y viviendas", 
+    img: "./img/construccion-sostenible.jpg",
+   },
+  { name: "Remodelación y ampliación",
+  img: "./img/arquitectura.jpg",
+
+   },
+
+  { name: "Instalaciones eléctricas y de plomería",
+  img: "./img/electricasplomeria.webp",
+
+   },
+
+  { name: "Obras viales y públicas",     
+    img: "./img/Obrasvialesypublicas.jpg",
+ },
+
+  { name: "Diseño y arquitectura", 
+  img: "./img/arqui.jpg",
+
+   },
+
+  { name: "Consultoría y gestión de proyectos", 
+  img: "./img/consultoria.jpg",
+
+   },
+];
 ---
 
 <Layout title="Servicios">
-  <NavBar />
+  <NavBar
+  <article class="alto">
 
-  <div>
-    <h2>Servicios</h2>
-  <p>
-    ConstruFuturo ofrece una amplia gama de servicios adaptados a tus
-    necesidades, tanto para proyectos residenciales como comerciales e
-    industriales:
-  </p>
-  <ul>
-    <li>Construcción de edificios y viviendas</li>
-    <li>Remodelación y ampliación</li>
-    <li>Instalaciones eléctricas y de plomería</li>
-    <li>Obras viales y públicas</li>
-    <li>Diseño y arquitectura</li>
-    <li>Consultoría y gestión de proyectos</li>
-  </ul>
-</div>
+    <h2 class="text-4xl h-24 font-bold text-center">Servicios</h2>
+    <p>
+      ConstruFuturo ofrece una amplia gama de servicios adaptados a tus
+      necesidades, tanto para proyectos residenciales como comerciales e
+      industriales:
+    </p>
+    <div>
+
+      <ul>
+        <li>{services.map((serv) => <p>
+          <img class="w-auto rounded-3xl mb-4 " src={serv.img} alt={serv.name} />
+          {serv.name}
+          </p>)}</li>
+      </ul>
+    </div>
+  </article>
 </Layout>
 
-<style is:global>
+<style is:global >      
+  .alto {
+    height: 500px;
+    margin: 0 auto; 
+    padding: 10px; 
+  }
+
+  h2 {
+      padding: 10px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 3rem;
+      color: #fff000;
+    } 
+
+    p {
+      font-size: 1.1rem;
+      padding: 10px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      color: #ffffff;
+      filter: drop-shadow(0 0 0.75rem black);
+
+    }
+     li {
+      font-size: 1rem;
+      padding: 10px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      display: flex;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+    }
+
+    img:hover {
+      filter: grayscale(0%);
+    }
+    
+  .bg {
+    background: #13151a;
+    color: white;
+    height: 100vh;
+  }
+
   html {
     font-family: system-ui, sans-serif;
     background: #13151a;
     background-size: 224px;
     color: white;
   }
+  article, {
+    margin: 0 auto;
+    padding: 2rem;
+    
+  }
+
+  .art-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   code {
     font-family:
       Menlo,
@@ -43,4 +134,3 @@ import NavBar from "../components/Navegacion/NavBar.astro"
       monospace;
   }
 </style>
-

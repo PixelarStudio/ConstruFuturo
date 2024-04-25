@@ -1,37 +1,71 @@
 ---
-import NavBar from "../components/Navegacion/NavBar.astro"
+const imgHero = "./img/main-logo-white.svg";
 ---
 
 
 	
-	<div class="container-hero">
+	<div class="container-hero capa">
+		<figure>
+			<img src={imgHero} class="mx-auto w-auto h-auto" alt="Imagen Logo">
 		
-		<h2>Bienvenido a ConstruFuturo!</h2>
+		</figure>
+		<article class="">
+			<h1 class="font-medium py-3 pb-3 px-3">Somos ConstruFuturo!</h1>
 	
 	
-		<h4>Somos una empresa dedicada a brindar soluciones integrales en el campo de la construcción. Con más de 25 años de experiencia y un equipo de profesionales altamente capacitados, transformamos tus ideas en estructuras sólidas y seguras. Tu sueño, nuestra misión.</h4>
+			<h4 class="font-medium py-3 pb-3 px-3">Una empresa dedicada a brindar soluciones integrales en el campo de la construcción. </h4>
+				
+				<h4 class="font-medium py-3 pb-3 px-8">Con más de 25 años de experiencia y un equipo de profesionales altamente capacitados, transformamos tus ideas en estructuras sólidas y seguras. </h4>
+				<h4 class="font-medium py-3 pb-3 px-8">Tu sueño, nuestra misión. </h4>
+
+			
+		</article>
 		 
 	</div>
 
 <style is:global>
 	.container-hero {
 		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 1rem;
+		height: auto;
+		margin: 0px auto;
+		padding: 80px 40px;
 		border-radius: 10px; 
-		text-align: center;
-		padding: 10px; 
-		margin-top: 50px;
+		text-align: center; 
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
-	.container-hero h2 {
+
+	.container-hero, .capa  {
 		font-size: 2.5rem;
 		color: white;
+		filter: drop-shadow(0 0 0.75rem black);
+		background-color: rgba(0, 0, 0, 0.4);
+		width: 100%;
 	}
+	
+	.container-hero, h1  {
+		font-size: 2.5rem;
+		color: white;
+		filter: drop-shadow(0 0 0.75rem black);
+	}
+	.container-hero, h2  {
+		font-size: 1.5rem;
+		color: white;
+		filter: drop-shadow(0 0 0.75rem black);
+	}
+
+	h4, h5 {
+		font-size: 1.2rem;
+		color: white;
+		filter: drop-shadow(0 0 0.75rem white);
+		margin: 0 auto;
+	}	
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
-		background-size: 224px;
 		color: white;
+		
 	}
 	code {
 		font-family:

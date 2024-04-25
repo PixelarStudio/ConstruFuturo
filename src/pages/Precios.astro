@@ -1,69 +1,84 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import NavBar from "../components/Navegacion/NavBar.astro"
+import Article from "../components/Article.astro"
 ---
 
 <Layout title="Precios">
 
-    <NavBar />
-    <div><h2>Precios</h2>
-        <p>Lista de Precios Orientativos</p>
-        <table>
-            <tr>
-                <th>Servicio</th>
-                <th>Precio $</th>
+    <article>
+        <h2 class="text-4xl h-14 font-bold text-center">Precios</h2>
+        <p class="text-2xl h-14 font-bold text-center">Lista de Precios Orientativos</p>
+        <table class="w-full bg-slate-700 my-4 text-white">
+            <tr class="p-4 m-4">
+                <th class="p-4 m-4 border-t-1">Servicio</th>
+                <th class="p-4 m-4 border-t-1" >Precio $</th>
             </tr>
-            <tr>
-                <td>Construcción de vivienda unifamiliar</td>
-                <td>4,900,000</td>
+            <tr  class="p-4 m-4 bg-slate-500 hover:bg-slate-600">
+                <td class="p-4 m-4 text-center text-lg font-medium  border-t-4">Construcción de vivienda unifamiliar</td>
+                <td class="p-4 m-4 text-center text-lg font-medium  border-t-4"> $ 4,900,000</td>
             </tr>
-            <tr>
-                <td>Remodelación completa</td>
-                <td>980,000</td>
+            <tr class="p-4 m-4 bg-slate-500 hover:bg-slate-600">
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">Remodelación completa</td>
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">$ 980,000</td>
             </tr>
-            <tr>
-                <td>Instalación eléctrica</td>
-                <td>245,000</td>
+            <tr class="p-4 m-4 bg-slate-500 hover:bg-slate-600">
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">Instalación eléctrica</td>
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">$ 245,000</td>
             </tr>
-            <tr>
-                <td>Obras viales por metro cuadrado</td>
-                <td>49,000</td>
+            <tr class="p-4 m-4 bg-slate-500 hover:bg-slate-600">
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">Obras viales por metro cuadrado</td>
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">$ 49,000</td>
             </tr>
-            <tr>
-                <td>Diseño y planificación</td>
-                <td>735,000</td>
+            <tr class="p-4 m-4 bg-slate-500 hover:bg-slate-600">
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">Diseño y planificación</td>
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">$ 735,000</td>
             </tr>
-            <tr>
-                <td>Construcción de piscina</td>
-                <td>1,225,000</td>
+            <tr class="p-4 m-4 bg-slate-500 hover:bg-slate-600">
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">Construcción de piscina</td>
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">$ 1,225,000</td>
             </tr>
-            <tr>
-                <td>Construcción de muro perimetral</td>
-                <td>1,225,000</td>
+            <tr class="p-4 m-4 bg-slate-500 hover:bg-slate-600">
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">Construcción de muro perimetral</td>
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">$ 1,225,000</td>
             </tr>
-            <tr>
-                <td>Construcción de muro de contención</td>
-                <td>1,225,000</td>
+            <tr class="p-4 m-4 bg-slate-500 hover:bg-slate-600 hover:cursor-info">
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">Construcción de muro de contención</td>
+                <td class="p-4 m-4 text-center text-lg font-medium border-t-4 border-b-slate-800">$ 1,225,000</td>
             </tr>
             
     
     
         </table>
     
-    </div>
+    </article>
 
 </Layout>
 
 
 
-<style is:global>
+<style>
 
+    h1 {
+        text-align: center ;
+        color: white; 
+        font-size: 40px;
+        padding: 20px;
+        font-weight: 500;
+    }
+
+    p {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        font-weight: 500;
+    }
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
 		color: white;
-	}
+    }
 	code {
 		font-family:
 			Menlo,

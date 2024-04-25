@@ -1,6 +1,4 @@
 ---
-import NavBar from "../components/Navegacion/NavBar.astro"
-
 const questionList = [
   {
     question: "¿Cuál es el tiempo promedio para construir una casa?",
@@ -39,24 +37,34 @@ const questionList = [
     response: "Sí, ofrecemos una garantía de estructura de 10 años.",
   },
 ];
-import Layout from "../layouts/Layout.astro"
 
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/Navegacion/NavBar.astro";
+import HeroBack from "./HeroBack.astro";
 ---
 <Layout title="Faq" >
-  <NavBar />
-  <div>
-    <h2>Faq</h2>
+
+  <NavBar/>
+	<main >
+    <div>
+      <h2 class="text-4xl h-24 font-bold text-center">Faq</h2>
+    
+      <section>
+        <div class="quest-resp">{questionList.map( (quest) => ( 
+            <div>
+                <h3>{quest.question}</h3>
+                <p>{quest.response}</p>
+            </div>
+            
+        ))}
+      </section>
+    </div>
+
+  </main>
+  <footer />
+
+
   
-    <section>
-      <div class="quest-resp">{questionList.map( (quest) => ( 
-          <div>
-              <h3>{quest.question}</h3>
-              <p>{quest.response}</p>
-          </div>
-          
-      ))}
-    </section>
-  </div>
 
 </Layout>
 
