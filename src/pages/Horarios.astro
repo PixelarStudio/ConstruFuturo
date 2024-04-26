@@ -1,25 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import HorariosData from "../components/HorariosData/HorariosData.astro";
+import NavBar from "../components/Navegacion/NavBar.astro";
+import Iframe from "../components/HorariosData/Iframe.astro";
+import Footer from "../components/Footer/Footer.astro";
 
 ---
 
 
 
 <Layout title="Horario de Atencion">
-  <div>
-    <h2 class="text-4xl h-24 font-bold text-center">Horarios de Atencion y Contacto</h2>
-  
-    <ul>
-      <li>Lunes a Viernes: 8:00 am - 6:00 pm</li>
-      <li>Teléfono: +54 1234 5678</li>
-      <li>Correo electrónico: contacto@construfuturo.com</li>
-      <li>Ubicación: Avenida Constructor 456, Buenos Aires, Argentina</li>
-    </ul>
-  </div>
-
+<NavBar />
+<HorariosData />
+<Iframe />
+<Footer />
 </Layout>
 
 <style is:global>
+    h2 {
+      padding: 10px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 3rem;
+      color: #fff000;
+    } 
   html {
     font-family: system-ui, sans-serif;
     background: #13151a;

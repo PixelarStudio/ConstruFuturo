@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro"
+const imgLogo = "./img/main-logo-white.svg";
+
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
+
+---
+
+<Layout title="Footer">
+    
+<footer>
+
+    <div class="footer bg-slate-600">
+        <div class="footer__container">
+            <div class="logo w-48 h-48 p-3 "><img src={imgLogo} alt="LOGO ConstruFuturo" /></div>
+            <div class="footer__container__links">
+                <div>
+                    <a href="/"><em>Inicio</em></a>
+                    <a href="/Faq"><em>Faq</em></a>
+                    <a href="/Horarios"><em>Horarios</em></a>
+                    <a href="/Precios"><em>Precios</em></a>
+                    <a href="/Servicios"><em>Servicios</em></a>
+                    <a href="/Tips"><em>Tips</em></a>
+                  </div>
+            </div>
+            <div class="footer__container__social">
+                <ul>
+                    <li><a href="#"> <FaFacebook  size={40}  className="FaFacebook"/></a></li>
+                    <li><a href="#"> <FaXTwitter size={40} className="FaXTwitter"/></a></li>
+                    <li><a href="#"><FaInstagram size={40} className="FaInstagram"/></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="footer__bottom__container">
+            <p>&copy; 2024 - ConstruFuturo</p>
+        </div>
+    </div>
+</footer>
+
+
+</Layout> 
+
+<style is:global>
+
+/* SocialIcons */
+
+    .FaFacebook {
+        padding: 10px;
+    }
+
+    .FaXTwitter {
+        padding: 10px;
+    }
+
+
+    .FaInstagram {
+        padding: 10px;
+    }
+
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items:safe;
+        height: 300px;
+        padding: 20px 0;
+
+        }
+
+    .footer__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer__container__logo img {
+        width: 100px;
+    }
+
+    .footer__container__links ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__container__links ul li {
+        list-style: none;
+        margin-right: 20px;
+    }
+
+    .footer__container__links ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .footer__container__social {
+        background-color: transparent;
+    }
+    .footer__container__social ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__container__social ul li {
+        list-style: none;
+        margin-right: 20px;
+    }
+
+    .footer__container__social ul li a {
+        text-decoration: none;
+    }
+
+    .footer__bottom {
+        background-color: #262625;
+        color: #fff;
+        padding: 10px 0;
+    }
+
+    .footer__bottom__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__bottom__container p {
+        margin: 0;
+    }
+</style>

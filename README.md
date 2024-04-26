@@ -29,7 +29,7 @@ Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
 
 ```bash
 # Clona el repositorio
-git clone https://github.com/PixelarStudios/ConstruFuturo.git
+git clone https://github.com/PixelarStudio/ConstruFuturo.git
 
 # Navega al directorio del proyecto
 cd ConstruFuturo

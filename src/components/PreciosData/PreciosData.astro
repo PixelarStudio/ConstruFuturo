@@ -1,0 +1,233 @@
+---
+import Layout from "../../layouts/Layout.astro"
+
+const questionList = [
+    {
+        question: "¿Cuánto cuesta pavimentar caminos?",
+        price: "$860,000"
+    },
+    {
+        question: "¿Cuánto cuesta instalar sistemas de riego?",
+        price: "$310,000"
+    },
+    {
+        question: "¿Cuánto cuesta renovar fachadas?",
+        price: "$690,000"
+    },
+    {
+        question: "¿Cuánto cuesta construir terrazas?",
+        price: "$550,000"
+    },
+    {
+        question: "¿Cuánto cuesta instalar sistemas de seguridad?",
+        price: "$435,000"
+    },
+    {
+        question: "¿Cuánto cuesta reparar techos?",
+        price: "$820,000"
+    },
+    {
+        question: "¿Cuánto cuesta instalar paneles solares?",
+        price: "$950,000"
+    },
+    {
+        question: "¿Cuánto cuesta realizar aislamiento térmico?",
+        price: "$450,000"
+    },
+    {
+        question: "¿Cuánto cuesta hacer reformas de baños?",
+        price: "$300,000"
+    },
+    {
+        question: "¿Cuánto cuesta impermeabilizar estructuras?",
+        price: "$500,000"
+    },
+    {
+        question: "¿Cuánto cuesta construir un garaje?",
+        price: "$780,000"
+    },
+    {
+        question: "¿Cuánto cuesta instalar ventanas?",
+        price: "$410,000"
+    },
+    {
+        question: "¿Cuánto cuesta revestir suelos?",
+        price: "$370,000"
+    },
+    {
+        question: "¿Cuánto cuesta construir oficinas?",
+        price: "$1,500,000"
+    },
+    {
+        question: "¿Cuánto cuesta instalar calefacción central?",
+        price: "$600,000"
+    },
+    {
+        question: "¿Cuánto cuesta el mantenimiento de edificios?",
+        price: "$330,000"
+    },
+    {
+        question: "¿Cuánto cuesta pintar el exterior?",
+        price: "$290,000"
+    },
+    {
+        question: "¿Cuánto cuesta construir jardines?",
+        price: "$860,000"
+    },
+    {
+        question: "¿Cuánto cuesta instalar plomería completa?",
+        price: "$700,000"
+    },
+    {
+        question: "¿Cuánto cuesta construir una sauna?",
+        price: "$880,000"
+    },
+    {
+        question: "¿Cuánto cuesta restaurar patrimonio histórico?",
+        price: "$1,200,000"
+    },
+    {
+        question: "¿Cuánto cuesta demoler estructuras?",
+        price: "$400,000"
+    },
+    {
+        question: "¿Cuánto cuesta movimiento de tierras?",
+        price: "$950,000"
+    },
+    {
+        question: "¿Cuánto cuesta construir espacios comerciales?",
+        price: "$1,300,000"
+    },
+    {
+        question: "¿Cuánto cuesta montar estructuras metálicas?",
+        price: "$550,000"
+    },
+    {
+        question: "¿Cuánto cuesta construir accesos y rampas?",
+        price: "$410,000"
+    },
+    {
+        question: "¿Cuánto cuesta modernizar ascensores?",
+        price: "$750,000"
+    },
+    {
+        question: "¿Cuánto cuesta instalar sistemas contra incendios?",
+        price: "$540,000"
+    },
+    {
+        question: "¿Cuánto cuesta habilitar sótanos?",
+        price: "$920,000"
+    },
+    {
+        question: "¿Cuánto cuesta la reconstrucción tras siniestros?",
+        price: "$1,100,000"
+    }
+];
+
+---
+
+<Layout title="Precios">
+
+    <article>
+        <h2 class="text-4xl h-14 font-bold text-center">Precios</h2>
+        <p class="text-2xl h-14 font-bold text-center">Lista de Precios Orientativos y estan sujetos a cambios segun cotización del dolar</p>
+        <table class="min-w-full divide-y divide-gray-200 mt-6 shadow-lg">
+          <thead class="bg-gray-50">
+              <tr>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Servicio
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Precio $
+                  </th>
+              </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+              {questionList.map((qlist) => (
+                  <tr class="bg-slate-800 hover:bg-slate-700 text-white">
+                      <td class="px-6 py-4 whitespace-nowrap text-md">{qlist.question}</td>
+                      <td class="px-6 py-4 whitespace-nowrap text-md">{qlist.price}</td>
+                  </tr>
+              ))}
+          </tbody>
+      </table>
+    
+    </article>
+
+</Layout>
+<style is:global>
+  h2 {
+   padding: 10px;
+   margin: 0 auto;
+   text-align: center;
+   font-size: 3rem;
+   color: #fff000;
+ } 
+
+ p {
+   font-size: 1.1rem;
+   padding: 10px;
+   margin: 0 auto;
+   width: 100%;
+   text-align: center;
+   color: #ffffff;
+   filter: drop-shadow(0 0 0.75rem black);
+
+ }
+  li {
+   font-size: 1rem;
+   padding: 10px;
+   margin: 0 auto;
+   width: 100%;
+   text-align: center;
+   display: flex;
+ }
+ img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   filter: grayscale(100%);
+ }
+
+ img:hover {
+   filter: grayscale(0%);
+ }
+ 
+.bg {
+ background: #13151a;
+ color: white;
+ height: 100vh;
+}
+
+html {
+ font-family: system-ui, sans-serif;
+ background: #13151a;
+ background-size: 224px;
+ color: white;
+}
+article, {
+ margin: 0 auto;
+ padding: 2rem;
+ 
+}
+
+.art-container {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+code {
+ font-family:
+   Menlo,
+   Monaco,
+   Lucida Console,
+   Liberation Mono,
+   DejaVu Sans Mono,
+   Bitstream Vera Sans Mono,
+   Courier New,
+   monospace;
+}
+</style>
+

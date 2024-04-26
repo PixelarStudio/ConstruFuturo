@@ -1,64 +1,19 @@
 ---
 import NavBar from "../components/Navegacion/NavBar.astro";
 import Layout from "../layouts/Layout.astro";
-const services = [
-  { name: "Construcción de edificios y viviendas", 
-    img: "./img/construccion-sostenible.jpg",
-   },
-  { name: "Remodelación y ampliación",
-  img: "./img/arquitectura.jpg",
+import ServiciosLinks from "../components/Services/ServiciosLinks.astro";
+import Footer from "../components/Footer/Footer.astro";
 
-   },
 
-  { name: "Instalaciones eléctricas y de plomería",
-  img: "./img/electricasplomeria.webp",
-
-   },
-
-  { name: "Obras viales y públicas",     
-    img: "./img/Obrasvialesypublicas.jpg",
- },
-
-  { name: "Diseño y arquitectura", 
-  img: "./img/arqui.jpg",
-
-   },
-
-  { name: "Consultoría y gestión de proyectos", 
-  img: "./img/consultoria.jpg",
-
-   },
-];
 ---
 
 <Layout title="Servicios">
-  <NavBar
-  <article class="alto">
+  <NavBar />
+ <ServiciosLinks />
 
-    <h2 class="text-4xl h-24 font-bold text-center">Servicios</h2>
-    <p>
-      ConstruFuturo ofrece una amplia gama de servicios adaptados a tus
-      necesidades, tanto para proyectos residenciales como comerciales e
-      industriales:
-    </p>
-    <div>
-
-      <ul>
-        <li>{services.map((serv) => <p>
-          <img class="w-auto rounded-3xl mb-4 " src={serv.img} alt={serv.name} />
-          {serv.name}
-          </p>)}</li>
-      </ul>
-    </div>
-  </article>
 </Layout>
 
 <style is:global >      
-  .alto {
-    height: 500px;
-    margin: 0 auto; 
-    padding: 10px; 
-  }
 
   h2 {
       padding: 10px;
