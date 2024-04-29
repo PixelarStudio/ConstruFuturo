@@ -1,34 +1,11 @@
 ---
 import { navigate } from "astro:transitions/client";
 
-function goToFaq() {
-  navigate("/faq");
-}
-
-function goToHorarios() {
-  navigate("/Horarios");
-}
-
-function goToTips() {
-  navigate("/Tips");
-}
-
-function goToServicios() {
-  navigate("/Servicios");
-}
-
-function goToPrecios() {
-  navigate("/Precios");
-}
-function goToHome() {
-  navigate("/");
-}
-
-const imgLogo = "./img/main-logo-white.svg";
+const imgLogo = "./img/logoNavBarBg.png";
 ---
 
 <nav class="nav backdrop-blur-sm sticky top-0 margin-0">
-  <div class="logo w-20 h-20 "><img src={imgLogo} alt="LOGO ConstruFuturo" /></div>
+  <div class="logo w-auto h-12 p-0 "><img src={imgLogo} alt="LOGO ConstruFuturo" /></div>
   <div>
     <a href="/"><em>Inicio</em></a>
     <a href="/Faq"><em>Faq</em></a>
@@ -46,7 +23,7 @@ const imgLogo = "./img/main-logo-white.svg";
     display: flex;
     gap: 10px;
     justify-content: space-around;
-    padding: 1.3rem;
+    padding: 2rem;
     height: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     z-index: 1000;

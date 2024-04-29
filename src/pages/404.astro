@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const img404 = "/img/error404queesremovebg.png";
+const imgLogo = "/img/Constru1.png";
+---
+
+<Layout title="404 Error">
+  
+  <section class="mx-auto grid grid-cols-2 w-full mt-40 h-full">
+    <figure class="">
+      <img class="mx-auto w-7/12" src={imgLogo} alt="" />
+    </figure>
+   
+
+    <div>
+      <h1 class="mx-auto text-center text-7xl font-bold p-5 text-yellow-500 0">
+        404 Error
+      </h1>
+      <p class="text-center text-5xl text-red-400">Página no Encontrada</p>
+      <p class="text-center text-2xl p-6">
+        <em>
+          Creo que estas perdid@, pero no te preocupes, podes volver al inicio y seguir mirando nuestro sitio.
+        </em>
+      </p>
+    </div>
+
+
+
+ 
+  </section>
+
+  <div class="flex justify-center grid-cols-1 mt-14 ">
+    <button class="w-full p-5 flex justify-center items-center text-center">
+      <a href="/">Volver al inicio</a>
+    </button>
+  </div>
+</Layout>
+
+<style>
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 0;
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: #000000;
+    color: white;
+    max-width: 80%;
+    margin: 0 auto;
+    top: 0;
+  }
+
+  nav {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    padding: 2rem;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+  }
+
+  ul,
+  a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+</style>
