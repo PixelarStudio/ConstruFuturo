@@ -3,7 +3,7 @@
 ![Logo](https://raw.githubusercontent.com/PixelarStudio/ConstruFuturo/12c8fccdadb1d8654e5e2b793df0505e04ac6d03/public/img/main-logo-white.svg)
 
 
-ConstruFuturo es un proyecto de práctica desarrollado por PixelarStudios, enfocado en el sector de la construcción, simula un entorno de gestión donde los usuarios pueden visualizar proyectos de construcción y servicios en general.
+ConstruFuturo es un proyecto de práctica desarrollado por PixelarStudio, enfocado en el sector de la construcción, simula un entorno de gestión donde los usuarios pueden visualizar proyectos de construcción y servicios en general.
 
 ## ℹ Descripción
 
@@ -22,7 +22,7 @@ Este proyecto tiene como objetivo proporcionar una simulación realista de un en
 ## 🛠 Tecnologías Utilizadas
 
 - **Frontend**: Astro, HTML, ReactJs, JavaScript, TypeScript
-- **Estilado**: CSS, SCSS, TailwindCSS 
+- **Estilado**: CSS, SASS, TailwindCSS 
 - **Backend**: Node.js, Express.js
 - **Base de Datos**: FireBase, Login, FireStore
 
