@@ -8,5 +8,12 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
+   // Aquí se configurarían otras opciones de Astro
+   markdown: {
+    drafts: true,
+  },
+  vite: {
+    // Configuraciones de Vite si son necesarias
+  },
   integrations: [tailwind(), react(), mdx(), sitemap(), partytown()]
 });
