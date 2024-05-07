@@ -22,7 +22,7 @@ Este proyecto tiene como objetivo proporcionar una simulación realista de un en
 ## 🛠 Tecnologías Utilizadas
 
 - **Frontend**: Astro, HTML, ReactJs, JavaScript, TypeScript
-- **Estilado**: CSS, SCSS, TailwindCSS 
+- **Estilado**: CSS, SASS, TailwindCSS 
 - **Backend**: Node.js, Express.js
 - **Base de Datos**: FireBase, Login, FireStore
 
