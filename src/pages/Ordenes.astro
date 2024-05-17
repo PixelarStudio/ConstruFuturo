@@ -1,0 +1,27 @@
+---
+import { db } from '../lib/firebaseConfig';
+import { collection, getDocs } from "firebase/firestore/lite";
+
+// Función para obtener la lista de órdenes
+async function fetchOrdenes() {
+  const ordenesSnapshot = await getDocs(collection(db, "Ordenes"));
+  return ordenesSnapshot.docs.map(doc => doc.data());
+}
+
+// Obtener las órdenes al cargar la página
+const ordenes = await fetchOrdenes();
+---
+
+<html>
+  <head>
+    <title>Ordenes</title>
+  </head>
+  <body>
+    <h1>Listado de Ordenes</h1>
+    <ul>
+      {ordenes.map((orden) => (
+        <li>{orden.id}: {orden.descripcion}</li>
+      ))}
+    </ul>
+  </body>
+</html>

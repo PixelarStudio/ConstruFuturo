@@ -3,15 +3,17 @@ const imgLogo = "./img/logoNavBarBg.png";
 ---
 
 <nav class="nav backdrop-blur-sm sticky top-0 margin-0">
-  <div ><img class="logo w-auto h-12 p-0"src={imgLogo} alt="LOGO ConstruFuturo" /></div>
-  <div>
+  <div ><img class="logo w-auto h-12 p-0 sm:flex sm:w-full"src={imgLogo} alt="LOGO ConstruFuturo" /></div>
+  <nav class="flex flex-row gap-2 justify-around p-2 h-auto shadow-lg z-50">
     <a href="/"><em>Inicio</em></a>
     <a href="/Faq"><em>Faq</em></a>
     <a href="/Horarios"><em>Horarios</em></a>
     <a href="/Precios"><em>Precios</em></a>
     <a href="/Servicios"><em>Servicios</em></a>
     <a href="/Tips"><em>Tips</em></a>
-  </div>
+    <a href="/Ordenes"><em>Ordenes</em></a>
+    <a href="/Servicioss"><em>Servicios Astro</em></a>
+  </nav>
 
  
 </nav>
@@ -26,7 +28,6 @@ const imgLogo = "./img/logoNavBarBg.png";
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     z-index: 1000;
   }
-
   ul,
   a {
     background-color: black;
@@ -45,10 +46,3 @@ const imgLogo = "./img/logoNavBarBg.png";
   
 </style>
 
-<script>
-    function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
-    }
-  </script>
-  

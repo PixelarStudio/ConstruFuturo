@@ -30,14 +30,18 @@ const services = [
 ---
 
 
-<article class="alto">
-
+<section class="flex flex-col w-full sm:flex sm:flex-col ">
+  <div class="flex lg:flex lg:flex-row sm:flex-col w-full sm:flex">
     <h2 class="text-4xl h-24 font-bold text-center">Servicios</h2>
     <p>
       ConstruFuturo ofrece una amplia gama de servicios adaptados a tus
       necesidades, tanto para proyectos residenciales como comerciales e
       industriales:
     </p>
+    
+  </div>
+
+    
     <div>
 
       <ul>
@@ -47,7 +51,7 @@ const services = [
           </p>)}</li>
       </ul>
     </div>
-  </article>
+  </section>
 
   <style is:global>
     h2 {
@@ -87,24 +91,7 @@ const services = [
      filter: grayscale(0%);
    }
    
- html {
-   font-family: system-ui, sans-serif;
-   background: #13151a;
-   background-size: 224px;
-   color: white;
- }
- article, {
-   margin: 0 auto;
-   padding: 2rem;
-   
- }
 
- .art-container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
- }
 
  code {
    font-family:

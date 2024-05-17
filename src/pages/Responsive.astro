@@ -1,0 +1,160 @@
+---
+// src/pages/Responsive.astro
+import NavBar from "../components/Navegacion/NavBar.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Navigation</title>
+  </head>
+  <body class="font-sans antialiased">
+    <!-- Navegación -->
+    <NavBar />
+
+    <!-- Contenido de Prueba -->
+    <main class="mt-16 p-4 max-w-7xl mx-auto space-y-8">
+      <section class="bg-gray-100 p-6 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold mb-4">Bienvenido a la Página Responsive</h1>
+        <p class="text-lg">
+          Esta es una página de prueba para la barra de navegación con todas sus funcionalidades. Aquí tienes algunos ejemplos de contenido que puedes utilizar.
+        </p>
+      </section>
+
+      <section class="bg-blue-100 p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">Sección Faq</h2>
+        <ul class="list-disc list-inside">
+          <li class="mb-2">¿Qué es Astro?</li>
+          <li class="mb-2">¿Cómo usar Tailwind CSS con Astro?</li>
+          <li class="mb-2">¿Cómo crear componentes reutilizables?</li>
+        </ul>
+      </section>
+
+      <section class="bg-green-100 p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4 ">Horarios Disponibles</h2>
+        <table class="min-w-full bg-white rounded-lg shadow-md overflow-hidden">
+          <thead class="bg-green-200">
+            <tr>
+              <th class="py-2 px-4 text-left">Día</th>
+              <th class="py-2 px-4 text-left">Hora</th>
+              <th class="py-2 px-4 text-left">Actividad</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-green-100">
+            <tr>
+              <td class="py-2 px-4">Lunes</td>
+              <td class="py-2 px-4">10:00 - 12:00</td>
+              <td class="py-2 px-4">Clase de Yoga</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4">Martes</td>
+              <td class="py-2 px-4">14:00 - 16:00</td>
+              <td class="py-2 px-4">Meditación Guiada</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4">Miércoles</td>
+              <td class="py-2 px-4">16:00 - 18:00</td>
+              <td class="py-2 px-4">Clase de Pilates</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="bg-yellow-100 p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">Precios y Tarifas</h2>
+        <ul class="list-disc list-inside">
+          <li class="mb-2">Clase Individual: $25</li>
+          <li class="mb-2">Paquete Mensual: $80</li>
+          <li class="mb-2">Suscripción Anual: $750</li>
+        </ul>
+      </section>
+
+      <section class="bg-red-100 p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">Servicios Ofrecidos</h2>
+        <ul class="list-disc list-inside">
+          <li class="mb-2">Clases de Yoga</li>
+          <li class="mb-2">Meditación Guiada</li>
+          <li class="mb-2">Terapia de Masajes</li>
+        </ul>
+      </section>
+
+      <section class="bg-purple-100 p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">Tips para una Vida Saludable</h2>
+        <ul class="list-disc list-inside">
+          <li class="mb-2">Bebe suficiente agua diariamente.</li>
+          <li class="mb-2">Practica meditación por lo menos 10 minutos al día.</li>
+          <li class="mb-2">Realiza actividad física regularmente.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
+
+
+
+<!-- ---
+
+---
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sección Responsive con Tailwind CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <section class="bg-white shadow-md rounded-lg p-6 max-w-6xl mx-auto my-8">
+    <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 text-gray-800">
+      Sección Responsive con Tailwind CSS
+    </h1>
+    <p class="text-sm sm:text-base md:text-lg lg:text-xl text-center text-gray-600 mb-8">
+      Aprende a crear un diseño adaptable para todos los dispositivos utilizando los atajos de Tailwind CSS.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="p-4 bg-blue-100 rounded-lg shadow">
+        <h2 class="text-xl font-semibold mb-2 text-blue-800">Desktop</h2>
+        <p class="text-sm sm:text-base md:text-lg text-blue-700">
+          Esta sección está optimizada para pantallas de escritorio.
+        </p>
+      </div>
+      <div class="p-4 bg-green-100 rounded-lg shadow">
+        <h2 class="text-xl font-semibold mb-2 text-green-800">Tablet</h2>
+        <p class="text-sm sm:text-base md:text-lg text-green-700">
+          Esta sección está optimizada para pantallas de tabletas.
+        </p>
+      </div>
+      <div class="p-4 bg-red-100 rounded-lg shadow">
+        <h2 class="text-xl font-semibold mb-2 text-red-800">Mobile</h2>
+        <p class="text-sm sm:text-base md:text-lg text-red-700">
+          Esta sección está optimizada para pantallas móviles.
+        </p>
+
+        h2 
+            padding: 10px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 3rem;
+            color: #fff000;
+           
+         
+          p 
+            font-size: 1.1rem;
+            padding: 10px;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            filter: drop-shadow(0 0 0.75rem black);
+         
+          
+           li 
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+ -->
